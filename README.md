@@ -139,6 +139,18 @@ Os dados do portfólio são centralizados no arquivo `src/shared/constants.ts`. 
 
 ```typescript
 export const portfolioData = {
+  // Configuração da Navbar
+  navbar: {
+    logoName: 'Seu Nome',
+    logoImage: '/logo.svg',
+    menuItems: [
+      { label: 'Home', id: 'hero' },
+      { label: 'Habilidades', id: 'skills' },
+      { label: 'Projetos', id: 'projects' },
+    ],
+  },
+
+  // Seção Hero (Apresentação)
   hero: {
     name: 'Seu Nome',
     title: 'Seu Cargo',
@@ -156,6 +168,7 @@ export const portfolioData = {
     ]
   },
   
+  // Seção de Habilidades
   skills: {
     title: 'Habilidades Técnicas',
     subtitle: 'Descrição opcional',
@@ -170,6 +183,7 @@ export const portfolioData = {
     ]
   },
   
+  // Seção de Projetos
   projects: {
     title: 'Projetos',
     projects: [
@@ -186,6 +200,7 @@ export const portfolioData = {
     ]
   },
   
+  // Rodapé
   footer: {
     name: 'Seu Nome',
     email: 'seu@email.com',
@@ -198,6 +213,8 @@ export const portfolioData = {
 };
 ```
 
+**Arquivo de Exemplo:** Consulte `constants.example.ts` para um exemplo completo com todas as opções e documentação detalhada.
+
 ### Personalização de Temas
 
 Para alterar as cores e estilos dos temas, edite os arquivos em `src/styles/themes/`:
@@ -206,32 +223,119 @@ Para alterar as cores e estilos dos temas, edite os arquivos em `src/styles/them
 // src/styles/themes/light.ts ou dark.ts
 export const lightTheme = {
   colors: {
-    primary: '#1976d2',
-    primaryDark: '#1565c0',
-    primaryLight: '#42a5f5',
-    // Personalize outras cores conforme necessário
+    primary: '#1976d2',           // Cor principal (botões, links, destaques)
+    primaryDark: '#1565c0',       // Variação escura da cor principal
+    primaryLight: '#42a5f5',      // Variação clara da cor principal
+    
+    secondary: '#dc004e',         // Cor secundária
+    secondaryDark: '#c51162',
+    secondaryLight: '#f50057',
+    
+    background: '#fafafa',        // Cor de fundo da página
+    surface: '#ffffff',           // Cor de cards e superfícies
+    
+    text: {
+      primary: 'rgba(0, 0, 0, 0.87)',    // Texto principal
+      secondary: 'rgba(0, 0, 0, 0.6)',    // Texto secundário
+      disabled: 'rgba(0, 0, 0, 0.38)',    // Texto desabilitado
+      inverse: '#ffffff',                 // Texto em fundos escuros
+    },
+    
+    border: '#e0e0e0',            // Bordas
+    borderLight: '#f5f5f5',
+    
+    // Cores de feedback
+    error: '#d32f2f',
+    success: '#2e7d32',
+    warning: '#ed6c02',
+    info: '#0288d1',
   },
+  
   fonts: {
     primary: '"Roboto", "Helvetica", "Arial", sans-serif',
-    // Personalize fontes e tamanhos
+    sizes: {
+      xs: '0.75rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+    },
+    weights: {
+      light: 300,
+      regular: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+    },
   },
-  // Outros tokens de design...
+  
+  spacing: {
+    xs: '0.25rem',
+    sm: '0.5rem',
+    md: '1rem',
+    lg: '1.5rem',
+    xl: '2rem',
+    '2xl': '3rem',
+    '3xl': '4rem',
+  },
+  
+  borderRadius: {
+    sm: '0.25rem',
+    md: '0.375rem',
+    lg: '0.5rem',
+    xl: '0.75rem',
+    '2xl': '1rem',
+    full: '9999px',
+  },
 };
 ```
 
+**Dicas de Personalização de Tema:**
+- Altere `colors.primary` para mudar a cor principal do site
+- Mantenha a consistência entre as variações (primary, primaryDark, primaryLight)
+- Use ferramentas como [Coolors](https://coolors.co/) para gerar paletas harmoniosas
+- Teste a acessibilidade das cores com [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+
 ### Adição de Ícones de Tecnologias
 
-1. Adicione o arquivo SVG do ícone em `public/icons/`
-2. Referencie no arquivo de constantes:
+**Passo a Passo:**
 
-```typescript
-{
-  name: 'Nova Tecnologia',
-  icon: 'icons/nova-tecnologia.svg',
-  category: 'frontend', // ou 'backend', 'tools', 'design'
-  description: 'Descrição da tecnologia...'
-}
-```
+1. **Baixe o ícone SVG**
+   - Acesse [Devicon](https://devicon.dev/) ou [Simple Icons](https://simpleicons.org/)
+   - Procure pela tecnologia desejada
+   - Baixe o arquivo SVG
+
+2. **Adicione o ícone ao projeto**
+   - Salve o arquivo em `public/icons/`
+   - Nomeie de forma clara: `react.svg`, `typescript.svg`, etc.
+
+3. **Referencie no arquivo de constantes:**
+   ```typescript
+   technologies: [
+     {
+       name: 'Nova Tecnologia',
+       icon: 'icons/nome-do-arquivo.svg',  // Caminho relativo a public/
+       category: 'frontend',  // ou 'backend', 'tools', 'design'
+       description: 'Descrição clara e objetiva da tecnologia...'
+     },
+   ]
+   ```
+
+**Categorias Disponíveis:**
+- `frontend` - React, Vue, Angular, HTML, CSS, etc.
+- `backend` - Node.js, Python, Java, PHP, databases, etc.
+- `tools` - Git, Docker, VS Code, Webpack, etc.
+- `design` - Figma, Photoshop, Illustrator, etc.
+
+**Dicas:**
+- Use SVGs em vez de PNGs para melhor qualidade
+- Mantenha um padrão de nomenclatura consistente
+- Teste os ícones em ambos os temas (claro e escuro)
+- Ícones SVG funcionam melhor em tamanhos variados
 
 ### Personalização do Logo
 
@@ -452,12 +556,6 @@ npm run deploy
 - Navegação completa por teclado
 - Indicadores visuais de foco (focus-visible)
 - Contraste adequado de cores em ambos os temas
-
-### Performance
-- Code splitting com lazy loading de rotas
-- Otimização de imagens e assets
-- Memoization de componentes pesados quando necessário
-- Build otimizado com Vite
 
 ## Contribuindo
 
