@@ -641,10 +641,18 @@ Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](L
 
 **Thiago Silva** - Desenvolvedor Full Stack
 
-[![Portfólio](https://img.shields.io/badge/Portfólio-seu--portfolio.vercel.app-blue?style=for-the-badge&logo=vercel&logoColor=white)](https://portifolio-omega-topaz-82.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Thiago_Silva-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thiago-pedro-da-silva)
-[![GitHub](https://img.shields.io/badge/GitHub-thiagopedro99-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/thiagopedro99)
-[![Email](https://img.shields.io/badge/Email-thiago.gefa@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:thiago.gefa@gmail.com)
+<a href="https://othiagosilva.com.br/" target="_blank">
+  <img src="https://img.shields.io/badge/Portfólio-othiagosilva.com.br-blue?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfólio">
+</a>
+<a href="https://www.linkedin.com/in/thiago-pedro-da-silva" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-Thiago_Silva-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+<a href="https://github.com/thiagopedro99" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-thiagopedro99-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+</a>
+<a href="mailto:thiago.gefa@gmail.com">
+  <img src="https://img.shields.io/badge/Email-thiago.gefa@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+</a>
 
 ---
 
