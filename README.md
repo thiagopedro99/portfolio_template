@@ -105,34 +105,6 @@ Veja o arquivo `constants.example.ts` para um exemplo completo e documentado.
 
 ## Guia de Personalização
 
-### Configuração da Barra de Navegação
-
-A configuração da navbar está no arquivo `src/shared/constants.ts`:
-
-```typescript
-navbar: {
-  logoName: 'Seu Nome ou Marca',
-  logoImage: '/logo.svg', // Caminho do logo em public/
-  menuItems: [
-    { label: 'Home', id: 'hero' },
-    { label: 'Sobre', id: 'about' },
-    { label: 'Habilidades', id: 'skills' },
-    { label: 'Projetos', id: 'projects' },
-    { label: 'Contato', id: 'contact' },
-  ],
-}
-```
-
-**Personalizando o Logo:**
-1. Substitua o arquivo `public/logo.svg` pelo seu logo
-2. Ou altere o caminho em `logoImage` para apontar para outro arquivo
-3. O `logoName` aparece ao lado do logo
-
-**Adicionando/Removendo Links:**
-- Cada item do menu deve ter um `label` (texto exibido) e `id` (id da seção correspondente)
-- O `id` deve corresponder ao `id` da seção no HTML
-- A navbar detecta automaticamente qual seção está visível e destaca o link
-
 ### Configuração de Dados do Portfólio
 
 Os dados do portfólio são centralizados no arquivo `src/shared/constants.ts`. Para personalizar:
@@ -212,8 +184,6 @@ export const portfolioData = {
   }
 };
 ```
-
-**Arquivo de Exemplo:** Consulte `constants.example.ts` para um exemplo completo com todas as opções e documentação detalhada.
 
 ### Personalização de Temas
 
